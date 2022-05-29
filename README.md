@@ -36,7 +36,7 @@
 - Chú chim luôn có xu hướng rơi tự do.
 - Sử dụng phím mũi tên hướng lên để di chuyển chú chim.
 - Mỗi lần di chuyển qua 1 cột hệ thống sẽ ghi nhận của bạn 1 điểm.
-- Xem mô tả chi tiết tại: 
+- Xem mô tả chi tiết tại: https://youtu.be/7psZHRTi3k0
 
 # IV-Các kĩ thuật lập trình được sử dụng
   <Game sử dụng ngôn ngữ lập trình C++>
