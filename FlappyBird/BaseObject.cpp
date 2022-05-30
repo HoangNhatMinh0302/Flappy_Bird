@@ -18,31 +18,25 @@ BaseObject::~BaseObject()
 
 bool BaseObject::LoadImageFile(std::string path, SDL_Renderer* screen)
 {
-    //The final texture
     Free();
     SDL_Texture* newTexture = NULL;
 
-    //Load image at specified path
     SDL_Surface* loadedSurface = IMG_Load(path.c_str());
     if (loadedSurface != NULL)
     {
-        //Color key image
         Uint32 key = SDL_MapRGB(loadedSurface->format,
                                 COLOR_KEY_R,
                                 COLOR_KEY_G,
                                 COLOR_KEY_B);
         SDL_SetColorKey(loadedSurface, SDL_TRUE, key);
 
-        //Create texture from surface pixels
         newTexture = SDL_CreateTextureFromSurface(screen, loadedSurface);
         if (newTexture != NULL)
         {
-            //Get image dimensions
             rect_.w = loadedSurface->w;
             rect_.h = loadedSurface->h;
         }
 
-        //Get rid of old loaded surface
         SDL_FreeSurface(loadedSurface);
     }
 
